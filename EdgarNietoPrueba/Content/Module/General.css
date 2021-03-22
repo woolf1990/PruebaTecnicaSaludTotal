@@ -1,0 +1,44 @@
+﻿h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  border-bottom: 2px solid #e5e5e5;
+  /*line-height: 1.1;*/
+  /*display:block;
+  text-align:center;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin:3px;*/
+}
+h1 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 30px;
+  /*background: #4F81BD;
+  color: #fff;*/
+}
+.inicio {
+clear: both; 
+padding: 8px;
+}
+table.inicio  {
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;     
+     text-align:left;
+}
+.buscarDiv{
+    clear: both; 
+    padding: 10px; 
+    display: none;
+}
+.subtexto_azul {
+    font-size: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #006699;
+}
+iframe.noScrolling{
+
+    overflow: hidden;
+    border:none;
+}

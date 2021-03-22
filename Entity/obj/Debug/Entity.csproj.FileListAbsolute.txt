@@ -1,0 +1,7 @@
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\bin\Debug\Entity.dll.config
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\bin\Debug\Entity.dll
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\bin\Debug\Entity.pdb
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\obj\Debug\Entity.dll
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\obj\Debug\Entity.pdb
+E:\Documents\Visual Studio 2019\Project\EdgarNietoPrueba\Entity\obj\Debug\Entity.csprojAssemblyReference.cache

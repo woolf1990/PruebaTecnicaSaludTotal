@@ -1,0 +1,18 @@
+﻿/*
+    Para imprimir desde navegador
+*/
+@media all {
+   div.saltopagina{
+      display: none;
+   }
+}
+   
+@media print{
+   div.saltopagina{ 
+      display:block; 
+      page-break-before:always;
+   }
+}
+/*
+    Fin codigo para imprimir
+*/
