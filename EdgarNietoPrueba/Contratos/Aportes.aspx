@@ -46,6 +46,7 @@
         <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
         <div class="table-responsive">
         <!-- -->
+            <h2>Salario: <label id="lb_salario" runat="server"></label></h2>
             <table class="table table-striped table-hover">
             <thead>
               <tr>
@@ -84,16 +85,16 @@
               <tr>
                 <td >Salud</td>
                 <td >12.5%</td>
-                  <th ><label id="salud_empelador"></label></th>
+                  <th ><label id="lb_salud_empelador" runat="server"></label></th>
                 <td >4.0%</td>
-                  <th ><label id="salud_trabajador"></label></th>
+                  <th ><label id="lb_salud_trabajador" runat="server"></label></th>
               </tr>
               <tr>
                 <td >Pension</td>
                 <td >16.0%</td>
-                  <th ><label id="pension_empelador"></label></th>
+                  <th ><label id="lb_pension_empelador" runat="server"></label></th>
                 <td >4.0%</td>
-                  <th ><label id="pension_trabajador"></label></th>
+                  <th ><label id="lb_pension_trabajador" runat="server"></label></th>
               </tr>
             </tbody>
             </table>

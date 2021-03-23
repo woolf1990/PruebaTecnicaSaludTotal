@@ -89,11 +89,13 @@ namespace EdgarNietoPrueba.Contratos
 
         protected void gvMenus_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int index = 0;
+
             switch (e.CommandName)
             {
                 case "Aportes":
                     index = Convert.ToInt32(e.CommandArgument);
-                    Response.Redirect("Aportes?AppID=" + gvMenus.Rows[index].Cells[0].Text + "&salario=" + gvMenus.Rows[index].Cells[0].Text);
+                    Response.Redirect("Aportes?AppID=" + gvMenus.Rows[index].Cells[0].Text + "&salario=" + gvMenus.Rows[index].Cells[12].Text);
                     break;  
             }
         }
