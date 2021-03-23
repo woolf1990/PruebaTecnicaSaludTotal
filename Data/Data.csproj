@@ -87,6 +87,8 @@
   <ItemGroup>
     <Compile Include="Administration\Broker\BrkArl.cs" />
     <Compile Include="Administration\Broker\BrkClientes.cs" />
+    <Compile Include="Administration\Broker\BrkContratos.cs" />
+    <Compile Include="Administration\Broker\BrkNomina.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

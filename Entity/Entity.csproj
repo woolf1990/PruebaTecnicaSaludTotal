@@ -48,7 +48,13 @@
   <ItemGroup>
     <Compile Include="Arl_Entity.cs" />
     <Compile Include="Arl_Filtro.cs" />
+    <Compile Include="Cargo_Entity.cs" />
+    <Compile Include="Contratos_Entity.cs" />
+    <Compile Include="Contratos_Filtro.cs" />
+    <Compile Include="Estado_Entity.cs" />
+    <Compile Include="Nomina_Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoDoc_Entity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
