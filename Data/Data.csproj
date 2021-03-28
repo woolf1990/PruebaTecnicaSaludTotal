@@ -86,11 +86,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administration\Broker\BrkArl.cs" />
-    <Compile Include="Administration\Broker\BrkClientes.cs" />
-    <Compile Include="Administration\Broker\BrkContratos.cs" />
-    <Compile Include="Administration\Broker\BrkNomina.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Conexiones\ConexionSQLServer.cs" />
+    <Compile Include="Conexiones\ConexionPostgreSql.cs" />
+    <Compile Include="Conexiones\IConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\IQueries.cs" />
+    <Compile Include="Queries\QuerySqlServer.cs" />
+    <Compile Include="Queries\QueryPostgresSql.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

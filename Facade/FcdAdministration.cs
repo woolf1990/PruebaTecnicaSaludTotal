@@ -34,20 +34,5 @@ namespace Facade
         }
         #endregion
 
-        #region Contratos
-        public List<Contratos_Entity> contratosGet(Contratos_Filtro objFiltro)
-        {
-            BrkContratos obj = new BrkContratos();
-            return obj.get(objFiltro);
-        }
-        #endregion
-
-        #region Nomina
-        public bool nominaInsert(Nomina_Entity objDatos)
-        {
-            BrkNomina brkArl = new BrkNomina();
-            return brkArl.insert(objDatos);
-        }
-        #endregion
     }
 }

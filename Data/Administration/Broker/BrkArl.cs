@@ -1,4 +1,5 @@
-﻿using Entity;
+﻿using Data.Queries;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,20 +12,18 @@ namespace Data.Administration.Broker
     
     public class BrkArl
     {
-        /// <summary>
-        /// Arl
-        /// </summary>
-        /// <returns></returns>
         public List<Arl_Entity> getAll()
         {
             List<Arl_Entity> list = new List<Arl_Entity>();
             try
             {
                 IDataReader data;
-                Conexion db = new Conexion();
+                Conexion conexion = new Conexion();
+                var db = conexion.ClaseConexion();
                 using (db.conexion())
                 {
-                    using (IDbCommand comando = db.executeQuery("SELECT idarl, valor, usuariocreacion, to_char(fechacreacion, 'YYYY-MM-DD') fechacreacion, habilitado FROM pruebatecnica.arl"))
+                    IQueries objQueries = conexion.ClaseQueries();
+                    using (IDbCommand comando = db.executeQuery(objQueries.getQuery("getAll")))
                     {
                         data = comando.ExecuteReader();
 
@@ -52,57 +51,56 @@ namespace Data.Administration.Broker
             return list;
         }
 
-
-        /// <summary>
-        /// Arl
-        /// </summary>
-        /// <returns></returns>
         public List<Arl_Entity> get(Arl_Filtro filtro)
         {
             List<Arl_Entity> list = new List<Arl_Entity>();
             try
             {
+                Conexion conexion = new Conexion();
+                IQueries objQueries = conexion.ClaseQueries();
+                objQueries.setListas();
+
                 String where = " where 1=1 ";
                 #region Filtros
                 if (filtro.ValIdarl == true)
                 {
-                    where += String.Format(" and idarl = {0} ", filtro.Idarl);
+                    where += String.Format(objQueries.getWhere("idarl"), filtro.Idarl);
                 }
 
                 if (filtro.ValUsuariocreacion == true) {
-                    where += String.Format(" and usuariocreacion like '%{0}%' ", filtro.Usuariocreacion);
+                    where += String.Format(objQueries.getWhere("usuariocreacion"), filtro.Usuariocreacion);
                 }
 
                 if (filtro.ValFechacreacionInicial == true)
                 {
-                    where += String.Format(" and  TO_DATE(to_char(fechacreacion, 'YYYY-MM-DD'), 'YYYY-MM-DD') >= TO_DATE('{0}', 'YYYY-MM-DD') ", filtro.FechacreacionInicial);
+                    where += String.Format(objQueries.getWhere("fechacreacion_inicial"), filtro.FechacreacionInicial);
                 }
 
                 if (filtro.ValFechacreacionFinal == true)
                 {
-                    where += String.Format(" and  TO_DATE(to_char(fechacreacion, 'YYYY-MM-DD'), 'YYYY-MM-DD') <= TO_DATE('{0}', 'YYYY-MM-DD') ", filtro.FechacreacionFinal);
+                    where += String.Format(objQueries.getWhere("fechacreacion_final"), filtro.FechacreacionFinal);
                 }
 
                 if (filtro.ValValor_mayor_igual == true)
                 {
-                    where += String.Format(" and  valor >= {0} ", filtro.Valor_mayor_igual);
+                    where += String.Format(objQueries.getWhere("valor_mayor_igual"), filtro.Valor_mayor_igual);
                 }
 
                 if (filtro.ValValor_menor_igual == true)
                 {
-                    where += String.Format(" and  valor <= {0} ", filtro.Valor_menor_igual);
+                    where += String.Format(objQueries.getWhere("valor_mayor_igual"), filtro.Valor_menor_igual);
                 }
 
                 if (filtro.Valhabilitado == true)
                 {
-                    where += String.Format(" and  habilitado = {0} ", filtro.Habilitado);
+                    where += String.Format(objQueries.getWhere("habilitado"), filtro.Habilitado);
                 }
                 #endregion
                 IDataReader data;
-                Conexion db = new Conexion();
+                var db = conexion.ClaseConexion();
                 using (db.conexion())
                 {
-                    String query = String.Format("SELECT idarl, valor, usuariocreacion, to_char(fechacreacion, 'YYYY-MM-DD') fechacreacion, habilitado FROM pruebatecnica.arl {0}", where);
+                    String query = String.Format(objQueries.getQuery("arl_get"), where);
                     using (IDbCommand comando = db.executeQuery(query))
                     {
                         data = comando.ExecuteReader();
@@ -135,11 +133,13 @@ namespace Data.Administration.Broker
         {
             try
             {
-                Conexion db = new Conexion();
+                Conexion conexion = new Conexion();
+                IQueries objQueries = conexion.ClaseQueries();
+                objQueries.setListas();
+                var db = conexion.ClaseConexion();
                 using (db.conexion())
                 {
-                    // String query = String.Format("INSERT INTO pruebatecnica.arl (valor, usuariocreacion, fechacreacion, habilitado) VALUES({0}, '{1}', now(), {3})"
-                    String query = String.Format("INSERT INTO pruebatecnica.arl (valor, usuariocreacion, fechacreacion, habilitado) VALUES ({0}, '{1}', TO_DATE('{2}', 'YYYY-MM-DD'), {3})"
+                    String query = String.Format(objQueries.getQuery("arl_insert")
                         , obj.Valor
                         , obj.Usuariocreacion
                         , obj.Fechacreacion
@@ -161,11 +161,13 @@ namespace Data.Administration.Broker
         {
             try
             {
-                Conexion db = new Conexion();
+                Conexion conexion = new Conexion();
+                IQueries objQueries = conexion.ClaseQueries();
+                objQueries.setListas();
+                var db = conexion.ClaseConexion();
                 using (db.conexion())
                 {
-                    // String query = String.Format("INSERT INTO pruebatecnica.arl (valor, usuariocreacion, fechacreacion, habilitado) VALUES({0}, '{1}', now(), {3})"
-                    String query = String.Format("UPDATE pruebatecnica.arl SET valor={1}, usuariocreacion='{2}', fechacreacion=TO_DATE('{3}', 'YYYY-MM-DD'), habilitado={4} WHERE idarl= {0}"
+                    String query = String.Format(objQueries.getQuery("arl_update")
                         , obj.Idarl
                         , obj.Valor
                         , obj.Usuariocreacion
