@@ -60,8 +60,8 @@
                                 EntityFramwork6.Npgsql
                             </li>
                         </ul>
-                        Por ultimo se requiere configurar la cadena de conexion en el archivo web.config del proyecto EdgarNietoPrueba.
-                        <br />Buscar la linea:
+                        Por ultimo se requiere configurar la cadena de conexion en el archivo web.config del proyecto ProyectoBase.
+                        <br />Buscar la linea (46):
                         <br />connectionString="server=localhost\SQLEXPRESS2017;Database=PruebaTecnicaEdgarEnriqueNietoValdes;User Id=sa; Password=123;pooling=no;"
                         <br />Y modificarla con los datos encesarios para establecer conexión con su servidor de base de datos.
                     </p>

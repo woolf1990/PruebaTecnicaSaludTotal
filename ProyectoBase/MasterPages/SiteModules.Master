@@ -8,7 +8,7 @@
     </div>
     <div class='menubar-scroll-panel'>
         <ul id='main-menu' class='gui-controls'>
-            <li><a href="./default.aspx"><div class='gui-icon'><i class='fa fa-home'></i></div><span class='title'> Inicio </span><span class='selected'></span></a></li>
+            <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath %>'><div class='gui-icon'><i class='fa fa-home'></i></div><span class='title'> Inicio </span><span class='selected'></span></a></li>
             <li class='gui-folder'><a href='javascript:;'><div class='gui-icon'><i class='icon-file-text'> </i></div><span class='title'> Requerimientos</span><i class='icon-arrow'></i><span class='selected'></span></a>"
                 <ul class='sub-menu'>
                     <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath + "Requerimientos/Index.aspx" %>'><span class='title'>Consultar</span></a>

@@ -19,6 +19,7 @@ namespace EdgarNietoPrueba.Requerimientos
                 {
                     LlenarListas();
                     id.Enabled = false;
+                    f005_fecha_pruebas.Enabled = false;
                     FcdAdministration fcdAdministration = new FcdAdministration();
                     string AccionUser = "";
 
@@ -163,7 +164,7 @@ namespace EdgarNietoPrueba.Requerimientos
                 }
 
                 FcdAdministration fcdAdministration = new FcdAdministration();
-                bool res = fcdAdministration.f005_requerimiento_insert(obj);
+                bool res = fcdAdministration.f005_requerimiento_update(obj);
                 if (res)
                 {
                     var FailureText = "Grabación Exitosa";

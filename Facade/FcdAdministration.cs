@@ -53,6 +53,14 @@ namespace Facade
             Brk_T005_Requerimientos obj = new Brk_T005_Requerimientos();
             return obj.insert(prms);
         }
+
+        public bool f005_requerimiento_update(T005_Requerimiento prms)
+        {
+            Brk_T005_Requerimientos obj = new Brk_T005_Requerimientos();
+            return obj.update(prms);
+        }
+
+        
         #endregion
     }
 }

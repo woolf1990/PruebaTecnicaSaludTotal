@@ -59,7 +59,7 @@ namespace Data.Administration.Broker
                             obj.F005_dias_desarrollo = (data["f005_dias_desarrollo"] != DBNull.Value) ? Int32.Parse(data["f005_dias_desarrollo"].ToString()) : 0;
                             obj.F005_fecha_solicitud = (data["f005_fecha_solicitud"] != DBNull.Value) ? data["f005_fecha_solicitud"].ToString() : string.Empty;
                             obj.F005_fecha_desarrollo = (data["f005_fecha_desarrollo"] != DBNull.Value) ? data["f005_fecha_desarrollo"].ToString() : string.Empty;
-                            obj.F005_alive = Convert.ToInt32((data["f005_alive"] != DBNull.Value) ? Boolean.Parse(data["f005_alive"].ToString()) : false);
+                            obj.F005_alive = (data["f005_alive"] != DBNull.Value) ? Int32.Parse(data["f005_alive"].ToString()) : 0;  
                             list.Add(obj);
                         }
                         data.Close();
@@ -93,7 +93,44 @@ namespace Data.Administration.Broker
                     listprms.Add(new SqlParameter("@f005_dias_desarrollo", obj.F005_dias_desarrollo));
                     listprms.Add(new SqlParameter("@f005_fecha_solicitud", obj.F005_fecha_solicitud));
                     listprms.Add(new SqlParameter("@f005_fecha_desarrollo", obj.F005_fecha_desarrollo));
+                    listprms.Add(new SqlParameter("@f005_alive", obj.F005_alive));
                     using (IDbCommand comando = db.executeStoredProcedure("stp_requerimiento_insert", listprms))
+                    {
+                        data = comando.ExecuteReader();
+                        data.Close();
+                    }
+                    db.desconectar();
+                }
+            }
+            catch (Exception ex)
+            {
+                String error = ex.ToString();
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean update(T005_Requerimiento obj)
+        {
+            try
+            {
+                IDataReader data;
+                Conexion conexion = new Conexion();
+                var db = conexion.ClaseConexion();
+                using (db.conexion())
+                {
+                    List<SqlParameter> listprms = new List<SqlParameter>();
+                    listprms.Add(new SqlParameter("@f005_id", obj.F005_id));
+                    listprms.Add(new SqlParameter("@f005_area", obj.F005_area.F001_id));
+                    listprms.Add(new SqlParameter("@f005_aplicativo", obj.F005_aplicativo.F002_id));
+                    listprms.Add(new SqlParameter("@f005_ingeniero", obj.F005_ingeniero.F003_id));
+                    listprms.Add(new SqlParameter("@f005_prioridad", obj.F005_prioridad.F004_id));
+                    listprms.Add(new SqlParameter("@f005_alcance", obj.F005_alcance));
+                    listprms.Add(new SqlParameter("@f005_dias_desarrollo", obj.F005_dias_desarrollo));
+                    listprms.Add(new SqlParameter("@f005_fecha_solicitud", obj.F005_fecha_solicitud));
+                    listprms.Add(new SqlParameter("@f005_fecha_desarrollo", obj.F005_fecha_desarrollo));
+                    listprms.Add(new SqlParameter("@f005_alive", obj.F005_alive));
+                    using (IDbCommand comando = db.executeStoredProcedure("stp_requerimiento_update", listprms))
                     {
                         data = comando.ExecuteReader();
                         data.Close();
