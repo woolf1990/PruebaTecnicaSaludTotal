@@ -105,15 +105,6 @@ namespace EdgarNietoPrueba.Requerimientos
         protected global::System.Web.UI.WebControls.TextBox id;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
         /// f005_area control.
         /// </summary>
         /// <remarks>

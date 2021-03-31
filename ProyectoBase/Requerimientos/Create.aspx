@@ -51,8 +51,6 @@
                     <div class="form-group label-floating"  runat="server" id = "div_id">
                         <label for="id" class="control-label">Usuario creación</label>
                         <asp:TextBox runat="server" ID="id" placeholder="ID" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="periodo" Display="Dynamic" Text="Campo obligatorio"
-                    CssClass="text-danger"  ID="RequiredFieldValidator1" />
 				    </div>
 
                     <div class="form-group label-floating">
