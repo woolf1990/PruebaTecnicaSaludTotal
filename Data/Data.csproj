@@ -85,7 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\Broker\BrkArl.cs" />
     <Compile Include="Administration\Broker\Brk_T005_Requerimientos.cs" />
     <Compile Include="Administration\Broker\Brk_T004_Prioridades.cs" />
     <Compile Include="Administration\Broker\Brk_T003_Empleados.cs" />

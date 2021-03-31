@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arl_Entity.cs" />
-    <Compile Include="Arl_Filtro.cs" />
     <Compile Include="T001_Area.cs" />
     <Compile Include="T002_Aplicativo.cs" />
     <Compile Include="T003_Empleado.cs" />
