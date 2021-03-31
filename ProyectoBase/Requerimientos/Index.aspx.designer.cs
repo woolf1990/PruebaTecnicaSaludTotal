@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EdgarNietoPrueba.Arl
+namespace EdgarNietoPrueba.Requerimientos
 {
 
 
@@ -15,58 +15,49 @@ namespace EdgarNietoPrueba.Arl
     {
 
         /// <summary>
-        /// usuario control.
+        /// f005_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuario;
+        protected global::System.Web.UI.WebControls.TextBox f005_id;
 
         /// <summary>
-        /// ddlHabilitado control.
+        /// f005_area control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHabilitado;
+        protected global::System.Web.UI.WebControls.DropDownList f005_area;
 
         /// <summary>
-        /// TxtFechaInicial control.
+        /// f005_aplicativo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFechaInicial;
+        protected global::System.Web.UI.WebControls.DropDownList f005_aplicativo;
 
         /// <summary>
-        /// TxtFechaFinal control.
+        /// f005_ingeniero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFechaFinal;
+        protected global::System.Web.UI.WebControls.DropDownList f005_ingeniero;
 
         /// <summary>
-        /// valor_inicial control.
+        /// f005_prioridad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox valor_inicial;
-
-        /// <summary>
-        /// valor_final control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox valor_final;
+        protected global::System.Web.UI.WebControls.DropDownList f005_prioridad;
 
         /// <summary>
         /// ErrorMessage control.

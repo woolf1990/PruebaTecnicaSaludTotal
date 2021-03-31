@@ -9,10 +9,10 @@
     <div class='menubar-scroll-panel'>
         <ul id='main-menu' class='gui-controls'>
             <li><a href="./default.aspx"><div class='gui-icon'><i class='fa fa-home'></i></div><span class='title'> Inicio </span><span class='selected'></span></a></li>
-            <li class='gui-folder'><a href='javascript:;'><div class='gui-icon'><i class='icon-file-text'> </i></div><span class='title'> Arl</span><i class='icon-arrow'></i><span class='selected'></span></a>"
+            <li class='gui-folder'><a href='javascript:;'><div class='gui-icon'><i class='icon-file-text'> </i></div><span class='title'> Requerimientos</span><i class='icon-arrow'></i><span class='selected'></span></a>"
                 <ul class='sub-menu'>
-                    <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath + "Arl/Index.aspx" %>'><span class='title'>Consultar</span></a>
-                    <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath + "Arl/Create?action=create" %>'><span class='title'>Nuevo</span></a>
+                    <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath + "Requerimientos/Index.aspx" %>'><span class='title'>Consultar</span></a>
+                    <li><a href='<%= Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath + "Requerimientos/Create?action=create" %>'><span class='title'>Nuevo</span></a>
                 </ul>
                 
         </ul>   
@@ -2485,8 +2485,40 @@ body.modal-open .supreme-container{
                     lang: 'es',
                     clearButton: true,
                     weekStart: 0
+                }).on('change', function (e, date) {
+                    calcular_dias_prueba(date);
                 });
         });
+
+        function calcular_dias_prueba(date) {
+            console.log(new Date('2021-03-30'));
+            console.log(new Date('03-30-2021'));
+            var fecha_input = $('#ContentPlaceHolder1_TxtFechaFinal').val()
+            alert(fecha_input)
+            alert(fecha_input.substring(5, 7))
+            alert(fecha_input.substring(8, 10))
+            alert(fecha_input.substring(0, 4))
+            var fecha = new Date(fecha_input.substring(5, 7) + '-' + fecha_input.substring(8, 10) + '-' + fecha_input.substring(0, 4));
+
+            alert(fecha);
+            var dias = ($('#ContentPlaceHolder1_f005_dias_desarrollo').val() / 2) + $('#ContentPlaceHolder1_f005_dias_desarrollo').val(); // Número de días a agregar
+            var TuFecha = new Date(fecha.toISOString().slice(0, 10));
+
+            console.log(dias)
+            fecha.setDate(TuFecha.getDate() + dias);
+            console.log(fecha);
+            var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+            $('#ContentPlaceHolder1_f005_fecha_pruebas').val(fecha.toISOString().slice(0, 10));
+
+            var date = new Date('2021', '31', '03');
+            alert('the original date is ' + date);
+            var newdate = new Date(date);
+
+            newdate.setDate(newdate.getDate() - 7); // minus the date
+
+            var nd = new Date(newdate);
+            alert('the new date is ' + nd);
+        }
 
     </script>
     <script>

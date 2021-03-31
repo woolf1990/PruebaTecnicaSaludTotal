@@ -12,7 +12,7 @@
                                 IDE de desarrollo: Microsoft Visual Studio Community 2019 (2) Version 16.9.2
                             </li>
                             <li>
-                                Base de datos: PostgreSQL 10.16, compiled by Visual C++ build 1800, 64-bit
+                                Base de datos: Microsoft SQL Server 2017 (RTM-GDR) (KB4583456) - 14.0.2037.2 (X64)   Nov  2 2020 19:19:59   Copyright (C) 2017 Microsoft Corporation  Express Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19042: ) (Hypervisor) 
                             </li>
                             <li>
                                 Lenguaje de programación backend: C# Asp.Net
@@ -62,7 +62,7 @@
                         </ul>
                         Por ultimo se requiere configurar la cadena de conexion en el archivo web.config del proyecto EdgarNietoPrueba.
                         <br />Buscar la linea:
-                        <br />connectionString="server=localhost; port=5432;Database=postgres;User ID=postgres;Password=123;Integrated Security=True"
+                        <br />connectionString="server=localhost\SQLEXPRESS2017;Database=PruebaTecnicaEdgarEnriqueNietoValdes;User Id=sa; Password=123;pooling=no;"
                         <br />Y modificarla con los datos encesarios para establecer conexión con su servidor de base de datos.
                     </p>
                 </div>  

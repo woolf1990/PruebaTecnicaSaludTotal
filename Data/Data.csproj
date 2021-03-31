@@ -86,6 +86,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administration\Broker\BrkArl.cs" />
+    <Compile Include="Administration\Broker\Brk_T005_Requerimientos.cs" />
+    <Compile Include="Administration\Broker\Brk_T004_Prioridades.cs" />
+    <Compile Include="Administration\Broker\Brk_T003_Empleados.cs" />
+    <Compile Include="Administration\Broker\Brk_T002_Aplicaciones.cs" />
+    <Compile Include="Administration\Broker\Brk_T001_Area.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Conexiones\ConexionSQLServer.cs" />
     <Compile Include="Conexiones\ConexionPostgreSql.cs" />

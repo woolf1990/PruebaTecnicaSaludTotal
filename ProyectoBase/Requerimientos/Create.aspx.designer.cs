@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EdgarNietoPrueba.Arl
+namespace EdgarNietoPrueba.Requerimientos
 {
 
 
@@ -105,22 +105,58 @@ namespace EdgarNietoPrueba.Arl
         protected global::System.Web.UI.WebControls.TextBox id;
 
         /// <summary>
-        /// usuario control.
+        /// f005_area control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuario;
+        protected global::System.Web.UI.WebControls.DropDownList f005_area;
 
         /// <summary>
-        /// valor control.
+        /// f005_aplicativo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox valor;
+        protected global::System.Web.UI.WebControls.DropDownList f005_aplicativo;
+
+        /// <summary>
+        /// f005_ingeniero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList f005_ingeniero;
+
+        /// <summary>
+        /// f005_prioridad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList f005_prioridad;
+
+        /// <summary>
+        /// f005_alcance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox f005_alcance;
+
+        /// <summary>
+        /// f005_dias_desarrollo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox f005_dias_desarrollo;
 
         /// <summary>
         /// TxtFechaInicial control.
@@ -130,6 +166,24 @@ namespace EdgarNietoPrueba.Arl
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtFechaInicial;
+
+        /// <summary>
+        /// TxtFechaFinal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtFechaFinal;
+
+        /// <summary>
+        /// f005_fecha_pruebas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox f005_fecha_pruebas;
 
         /// <summary>
         /// habilitado control.

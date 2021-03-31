@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Arl_Entity.cs" />
     <Compile Include="Arl_Filtro.cs" />
+    <Compile Include="T001_Area.cs" />
+    <Compile Include="T002_Aplicativo.cs" />
+    <Compile Include="T003_Empleado.cs" />
+    <Compile Include="T004_Prioridad.cs" />
+    <Compile Include="T005_Requerimiento_Filtro.cs" />
+    <Compile Include="T005_Requerimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

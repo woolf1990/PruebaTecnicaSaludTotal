@@ -63,5 +63,29 @@ namespace Data
             comando.Dispose();
             connect.Close();
         }
+
+        public IDbCommand executeStoredProcedure(String stored, List<SqlParameter> list_prms) {
+            try
+            {
+                comando = connect.CreateCommand();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = stored;
+                if (list_prms != null)
+                {
+                    for (int i = 0; i < list_prms.Count; i++)
+                    {
+                        comando.Parameters.Add(list_prms[i]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+            }
+            
+            return comando;
+        }
     }
 }
